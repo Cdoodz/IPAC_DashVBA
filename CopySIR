@@ -1,0 +1,35 @@
+Sub SIRCopy()
+'
+' SIRCopy Macro
+'
+
+'
+    Range("L14").Select
+    Range(Selection, Selection.End(xlDown)).Select
+    Selection.Copy
+    ActiveWindow.ScrollColumn = 5
+    ActiveWindow.ScrollColumn = 6
+    ActiveWindow.ScrollColumn = 7
+    ActiveWindow.ScrollColumn = 8
+    ActiveWindow.ScrollColumn = 9
+    ActiveWindow.ScrollColumn = 10
+    ActiveWindow.SmallScroll Down:=-75
+    ActiveWindow.ScrollRow = 622
+    ActiveWindow.ScrollRow = 620
+    ActiveWindow.ScrollRow = 615
+    ActiveWindow.ScrollRow = 611
+    ActiveWindow.ScrollRow = 607
+    ActiveWindow.ScrollRow = 604
+    ActiveWindow.ScrollRow = 564
+    ActiveWindow.ScrollRow = 553
+    ActiveWindow.ScrollRow = 520
+    ActiveWindow.ScrollRow = 508
+    ActiveWindow.ScrollRow = 289
+    ActiveWindow.ScrollRow = 272
+    ActiveWindow.ScrollRow = 258
+    ActiveWindow.ScrollRow = 211
+    ActiveWindow.ScrollRow = 1
+    Range("T14").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+        :=False, Transpose:=False
+End Sub
