@@ -1,0 +1,260 @@
+Sub Old_New_Unit_Consolidate()
+'
+' CLAB_Consolidate Macro
+'
+
+'CHANGE 17CP-OLD TO 17_CP IN ALL TABLES
+'---TABLE CLAB_RATE
+    Application.Goto Reference:="CLAB_Rate"
+    Selection.Replace What:="17CP-OLD", Replacement:="17_CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CLAB_SIR
+    Application.Goto Reference:="CLAB_SIR"
+    Selection.Replace What:="17CP-OLD", Replacement:="17_CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CLABSI_CMS
+    Application.Goto Reference:="CLABSI_CMS"
+    Selection.Replace What:="17CP-OLD", Replacement:="17_CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CLAB_SUR
+    Application.Goto Reference:="CLAB_SUR"
+    Selection.Replace What:="17CP-OLD", Replacement:="17_CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CAUTI_Rate
+    Application.Goto Reference:="CAUTI_Rate"
+    Selection.Replace What:="17CP-OLD", Replacement:="17_CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CAUTI_SIR
+    Application.Goto Reference:="CAUTI_SIR"
+    Selection.Replace What:="17CP-OLD", Replacement:="17_CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CAUTI_CMS
+    Application.Goto Reference:="CAUTI_CMS"
+    Selection.Replace What:="17CP-OLD", Replacement:="17_CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CAUTI_SUR
+    Application.Goto Reference:="CAUTI_SUR"
+    Selection.Replace What:="17CP-OLD", Replacement:="17_CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CDI_AdmPrev
+    Application.Goto Reference:="CDI_AdmPrev"
+    Selection.Replace What:="17CP-OLD", Replacement:="17_CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CDI_CO_Prev
+    Application.Goto Reference:="CDI_CO_Prev"
+    Selection.Replace What:="17CP-OLD", Replacement:="17_CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CDI_HO_Rate
+    Application.Goto Reference:="CDI_HO_Rate"
+    Selection.Replace What:="17CP-OLD", Replacement:="17_CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CDI_UnitCount
+    Application.Goto Reference:="CDI_UnitCount"
+    Selection.Replace What:="17CP-OLD", Replacement:="17_CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+
+
+
+'CHANGE 9CPPC-OLD TO 9CP_PC IN ALL TABLES
+'---TABLE CLAB_RATE
+    Application.Goto Reference:="CLAB_Rate"
+    Selection.Replace What:="9CPPC-OLD", Replacement:="9CP_PC", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CLAB_SIR
+    Application.Goto Reference:="CLAB_SIR"
+    Selection.Replace What:="9CPPC-OLD", Replacement:="9CP_PC", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CLABSI_CMS
+    Application.Goto Reference:="CLABSI_CMS"
+    Selection.Replace What:="9CPPC-OLD", Replacement:="9CP_PC", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CLAB_SUR
+    Application.Goto Reference:="CLAB_SUR"
+    Selection.Replace What:="9CPPC-OLD", Replacement:="9CP_PC", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CAUTI_Rate
+    Application.Goto Reference:="CAUTI_Rate"
+    Selection.Replace What:="9CPPC-OLD", Replacement:="9CP_PC", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CAUTI_SIR
+    Application.Goto Reference:="CAUTI_SIR"
+    Selection.Replace What:="9CPPC-OLD", Replacement:="9CP_PC", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CAUTI_CMS
+    Application.Goto Reference:="CAUTI_CMS"
+    Selection.Replace What:="9CPPC-OLD", Replacement:="9CP_PC", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CAUTI_SUR
+    Application.Goto Reference:="CAUTI_SUR"
+    Selection.Replace What:="9CPPC-OLD", Replacement:="9CP_PC", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CDI_AdmPrev
+    Application.Goto Reference:="CDI_AdmPrev"
+    Selection.Replace What:="9CPPC-OLD", Replacement:="9CP_PC", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CDI_CO_Prev
+    Application.Goto Reference:="CDI_CO_Prev"
+    Selection.Replace What:="9CPPC-OLD", Replacement:="9CP_PC", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CDI_HO_Rate
+    Application.Goto Reference:="CDI_HO_Rate"
+    Selection.Replace What:="9CPPC-OLD", Replacement:="9CP_PC", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CDI_UnitCount
+    Application.Goto Reference:="CDI_UnitCount"
+    Selection.Replace What:="9CPPC-OLD", Replacement:="9CP_PC", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+
+
+'CHANGE TELE-OLD TO 8CP IN ALL TABLES
+'---TABLE CLAB_RATE
+    Application.Goto Reference:="CLAB_Rate"
+    Selection.Replace What:="TELE-OLD", Replacement:="8CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CLAB_SIR
+    Application.Goto Reference:="CLAB_SIR"
+    Selection.Replace What:="TELE-OLD", Replacement:="8CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CLABSI_CMS
+    Application.Goto Reference:="CLABSI_CMS"
+    Selection.Replace What:="TELE-OLD", Replacement:="8CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CLAB_SUR
+    Application.Goto Reference:="CLAB_SUR"
+    Selection.Replace What:="TELE-OLD", Replacement:="8CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CAUTI_Rate
+    Application.Goto Reference:="CAUTI_Rate"
+    Selection.Replace What:="TELE-OLD", Replacement:="8CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CAUTI_SIR
+    Application.Goto Reference:="CAUTI_SIR"
+    Selection.Replace What:="TELE-OLD", Replacement:="8CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CAUTI_CMS
+    Application.Goto Reference:="CAUTI_CMS"
+    Selection.Replace What:="TELE-OLD", Replacement:="8CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CAUTI_SUR
+    Application.Goto Reference:="CAUTI_SUR"
+    Selection.Replace What:="TELE-OLD", Replacement:="8CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CDI_AdmPrev
+    Application.Goto Reference:="CDI_AdmPrev"
+    Selection.Replace What:="TELE-OLD", Replacement:="8CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CDI_CO_Prev
+    Application.Goto Reference:="CDI_CO_Prev"
+    Selection.Replace What:="TELE-OLD", Replacement:="8CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CDI_HO_Rate
+    Application.Goto Reference:="CDI_HO_Rate"
+    Selection.Replace What:="TELE-OLD", Replacement:="8CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CDI_UnitCount
+    Application.Goto Reference:="CDI_UnitCount"
+    Selection.Replace What:="TELE-OLD", Replacement:="8CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+
+
+'CHANGE 7CP TO 7_CP IN ALL TABLES
+'---TABLE CLAB_RATE
+    Application.Goto Reference:="CLAB_Rate"
+    Selection.Replace What:="7CP", Replacement:="7_CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CLAB_SIR
+    Application.Goto Reference:="CLAB_SIR"
+    Selection.Replace What:="7CP", Replacement:="7_CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CLABSI_CMS
+    Application.Goto Reference:="CLABSI_CMS"
+    Selection.Replace What:="7CP", Replacement:="7_CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CLAB_SUR
+    Application.Goto Reference:="CLAB_SUR"
+    Selection.Replace What:="7CP", Replacement:="7_CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CAUTI_Rate
+    Application.Goto Reference:="CAUTI_Rate"
+    Selection.Replace What:="7CP", Replacement:="7_CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CAUTI_SIR
+    Application.Goto Reference:="CAUTI_SIR"
+    Selection.Replace What:="7CP", Replacement:="7_CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CAUTI_CMS
+    Application.Goto Reference:="CAUTI_CMS"
+    Selection.Replace What:="7CP", Replacement:="7_CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CAUTI_SUR
+    Application.Goto Reference:="CAUTI_SUR"
+    Selection.Replace What:="7CP", Replacement:="7_CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CDI_AdmPrev
+    Application.Goto Reference:="CDI_AdmPrev"
+    Selection.Replace What:="7CP", Replacement:="7_CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CDI_CO_Prev
+    Application.Goto Reference:="CDI_CO_Prev"
+    Selection.Replace What:="7CP", Replacement:="7_CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CDI_HO_Rate
+    Application.Goto Reference:="CDI_HO_Rate"
+    Selection.Replace What:="7CP", Replacement:="7_CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+'---TABLE CDI_UnitCount
+    Application.Goto Reference:="CDI_UnitCount"
+    Selection.Replace What:="7CP", Replacement:="7_CP", LookAt:=xlPart _
+        , SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+
+End Sub
+
+
