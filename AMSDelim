@@ -1,0 +1,73 @@
+Sub DELIM_AUSAARRATES()
+'Created by Amanda Norseth Ext 55459,Created for IPAC 03.19.20
+'
+'AU_SAAR_Rates TAB
+' DELIMITS RateDaysPresent95CI TO LOW/HIGH CI
+
+'TURN OFF ALERTS (OVERWRITE DATA MSG BOX)
+Application.DisplayAlerts = False
+
+
+'SELECT CI COLUMN
+Range("SAAR_Rate[RateDaysPresent95CI]").Select
+    
+'DELIMIT SELECTION (CI COLUMN) TO COLUMN P, DELIMIT 1 COLUMN INTO TWO COLUMNS
+Selection.TextToColumns Destination:=Range("SAAR_Rate[LowCI]"), DataType:=xlDelimited, _
+        TextQualifier:=xlDoubleQuote, ConsecutiveDelimiter:=False, Tab:=False, _
+        Semicolon:=False, Comma:=True, Space:=False, Other:=False, FieldInfo _
+        :=Array(Array(1, 1), Array(2, 1)), TrailingMinusNumbers:=True
+
+'SELECT LOWCI/HIGH CI
+Range("SAAR_Rate[[LowCI]:[High CI]]").Select
+    
+'REPLACE . IN CI COLUMNS (NEED TO USE IN PIVOT TABLE) REPLACE MATCH ENTIRE CELL CONTENTS (LookAt:=xlWhole)VS(LookAt:=xlPart)
+    Selection.Replace What:=".", Replacement:="", LookAt:=xlWhole, _
+        SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=False, _
+        ReplaceFormat:=False
+    
+'TURN ON ALERTS
+Application.DisplayAlerts = True
+
+End Sub
+
+Sub DELIM_ALLSAARS()
+'Created by Amanda Norseth Ext 55459,Created for IPAC 03.19.20
+
+'ALL SAAR TAB
+'THIS DELIMITS THE CI AND COPIES CDI AND MRSA SIR INTO TABLE
+
+'TURN OFF ALERTS (OVERWRITE DATA MSG BOX)
+Application.DisplayAlerts = False
+
+'SELECT CI COLUMN
+Range("SAAR[SAAR95CI]").Select
+    
+'DELIMIT SELECTION (CI COLUMN) TO COLUMN S, DELIMIT 1 COLUMN INTO TWO COLUMNS
+Selection.TextToColumns Destination:=Range("SAAR[LowCI]"), DataType:=xlDelimited, _
+        TextQualifier:=xlDoubleQuote, ConsecutiveDelimiter:=False, Tab:=False, _
+        Semicolon:=False, Comma:=True, Space:=False, Other:=False, FieldInfo _
+        :=Array(Array(1, 1), Array(2, 1)), TrailingMinusNumbers:=True
+
+'COPY NUMBER VALUE FROM CDI SIR (FORMULA) COLUMN TO CDISIRNUM COLUMN (IN ORDER TO ADD TO PIVOT TABLE)
+Range("SAAR[CDI SIR]").Select
+    Selection.Copy
+Range("SAAR[CDISIRNum]").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+    :=False, Transpose:=False
+    
+'COPY NUMBER VALUE FROM MRSA SIR (FORMULA) COLUMN TO MRSASIRNUM COLUMN (IN ORDER TO ADD TO PIVOT TABLE)
+Range("SAAR[MRSA SIR]").Select
+    Selection.Copy
+    Range("SAAR[MRSASIRNum]").Select
+    Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
+    :=False, Transpose:=False
+
+'TURN ON ALERTS
+Application.DisplayAlerts = True
+
+End Sub
+
+
+
+
+
