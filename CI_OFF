@@ -1,0 +1,34 @@
+
+Sub TurnCIoff()
+'Created by Amanda Norseth Ext 55459,Created for IPAC 03.19.20
+
+'works
+'takes CI off
+
+Dim sht As Worksheet
+Dim CurrentSheet As Worksheet
+Dim cht As ChartObject
+
+Application.ScreenUpdating = False
+Application.EnableEvents = False
+
+Set CurrentSheet = ActiveSheet
+
+'For Each sht In ActiveWorkbook.Worksheets
+  For Each cht In ActiveSheet.ChartObjects
+    cht.Activate
+
+On Error Resume Next
+
+   ActiveChart.FullSeriesCollection(4).Select
+    Selection.MarkerStyle = -4142
+    ActiveChart.FullSeriesCollection(3).Select
+    Selection.MarkerStyle = -4142
+  
+  Next cht
+'Next sht
+
+CurrentSheet.Activate
+Application.EnableEvents = True
+
+End Sub
