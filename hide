@@ -1,0 +1,13 @@
+Sub VeryHideAllButDash()
+   
+    Dim w As Worksheet
+   
+    For Each w In ThisWorkbook.Worksheets
+        If w.Name <> "AMS_Condensed" And w.Name <> "AMS_All" And w.Name <> "AU Chart" And w.Name <> "AU PIE" Then
+    w.Visible = xlSheetVeryHidden
+        
+        End If
+        Next
+End Sub
+
+
