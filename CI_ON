@@ -1,7 +1,6 @@
 Sub TurnCIon()
-'Created by Amanda Norseth Ext 55459,Created for IPAC 03.19.20
 
-'CI COMES BACK AS BLUE (WRONG COLOR)
+'works
 'turns CI on
 
 Dim sht As Worksheet
@@ -24,29 +23,53 @@ CurrentSheet.Activate
 On Error Resume Next
 
    ActiveChart.FullSeriesCollection(4).Select
-   
-    With Selection.Format.Fill
-        .Visible = msoTrue
+     
+    Selection.MarkerStyle = -4115
+     Selection.MarkerSize = 10
+    'Selection.Marker.ForeColor.RGB = RGB(118, 113, 113)
+        With Selection.Format.Line
+        .Visible = msoFalse
         .ForeColor.ObjectThemeColor = msoThemeColorBackground2
         .ForeColor.TintAndShade = 0
-        .ForeColor.Brightness = -0.8999999762
+        .ForeColor.RGB = RGB(81, 77, 117)
         .Transparency = 0
-        .Solid
     End With
-    
-    ActiveChart.FullSeriesCollection(3).Select
-    
     With Selection.Format.Fill
-        .Visible = msoTrue
+       .Visible = msoTrue
+       .ForeColor.ObjectThemeColor = msoThemeColorBackground2
+       .ForeColor.TintAndShade = 0
+       .ForeColor.RGB = RGB(81, 77, 117)
+ '       .Transparency = 0
+'        .Solid
+   End With
+    ActiveChart.FullSeriesCollection(3).Select
+      Selection.Format.Line.Visible = msoFalse
+     Selection.MarkerStyle = -4115
+        Selection.MarkerSize = 10
+       ' Selection.MarkerBackgroundColor.RGB = RGB(118, 113, 113)
+        With Selection.Format.Line
+        .Visible = msoFalse
         .ForeColor.ObjectThemeColor = msoThemeColorBackground2
         .ForeColor.TintAndShade = 0
-        .ForeColor.Brightness = -0.8999999762
+        .ForeColor.RGB = RGB(81, 77, 117)
         .Transparency = 0
-        .Solid
+    End With
+        With Selection.Format.Fill
+       .Visible = msoTrue
+        .ForeColor.ObjectThemeColor = msoThemeColorBackground2
+       .ForeColor.TintAndShade = 0
+        '.ForeColor.Brightness = -0.5 replaced with RBG
+        .ForeColor.RGB = RGB(81, 77, 117)
+'        .Transparency = 0
+'        .Solid
     End With
   
 
   Next cht
+
+
+'Next sht
+
 CurrentSheet.Activate
 Application.EnableEvents = True
 
