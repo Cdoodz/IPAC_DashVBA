@@ -1,0 +1,113 @@
+Sub PivotChartAll()
+'
+' PivotChart Macro
+Dim sht As Worksheet
+Dim CurrentSheet As Worksheet
+Dim cht As ChartObject
+
+Application.ScreenUpdating = False
+Application.EnableEvents = False
+
+Set CurrentSheet = ActiveSheet
+
+CurrentSheet.Activate
+'For Each sht In ActiveWorkbook.Worksheets
+ 
+ For Each cht In ActiveSheet.ChartObjects
+    cht.Activate
+    
+On Error Resume Next
+
+With ActiveChart.PivotLayout.PivotTable.CubeFields("[SAAR].[Year]")
+        .Orientation = xlRowField
+        .Position = 1
+    End With
+    With ActiveChart.PivotLayout.PivotTable.CubeFields("[SAAR].[MonthName]")
+        .Orientation = xlRowField
+        .Position = 2
+    End With
+    ActiveChart.PivotLayout.PivotTable.AddDataField ActiveChart.PivotLayout. _
+        PivotTable.CubeFields("[Measures].[Sum of LowCI]"), "Sum of LowCI"
+    ActiveChart.PivotLayout.PivotTable.AddDataField ActiveChart.PivotLayout. _
+        PivotTable.CubeFields("[Measures].[Sum of High CI 2]"), "Sum of High CI"
+    ActiveChart.PivotLayout.PivotTable.AddDataField ActiveChart.PivotLayout. _
+        PivotTable.CubeFields("[Measures].[Sum of SAARTarget]"), "Sum of SAARTarget"
+    'ActiveSheet.ChartObjects("Chart 21").Activate
+    ActiveChart.ShowAllFieldButtons = False
+    ActiveChart.ChartType = xlColumnClustered
+    ActiveChart.FullSeriesCollection(1).ChartType = xlColumnClustered
+    ActiveChart.FullSeriesCollection(1).AxisGroup = 1
+    ActiveChart.FullSeriesCollection(2).ChartType = xlColumnClustered
+    ActiveChart.FullSeriesCollection(2).AxisGroup = 1
+    ActiveChart.FullSeriesCollection(3).ChartType = xlLine
+    ActiveChart.FullSeriesCollection(3).AxisGroup = 1
+    ActiveChart.FullSeriesCollection(4).ChartType = xlLine
+    ActiveChart.FullSeriesCollection(4).AxisGroup = 1
+    ActiveChart.FullSeriesCollection(2).ChartType = xlLine
+    ActiveChart.FullSeriesCollection(3).ChartType = xlLineMarkers
+    ActiveChart.FullSeriesCollection(4).ChartType = xlLineMarkers
+    ActiveSheet.ChartObjects("Chart 21").Activate
+    ActiveChart.FullSeriesCollection(1).Select
+    ActiveChart.FullSeriesCollection(2).Select
+    With Selection.Format.Fill
+        .Visible = msoTrue
+        .ForeColor.RGB = RGB(0, 176, 80)
+        .Transparency = 0
+        .Solid
+    End With
+    ActiveChart.FullSeriesCollection(4).Select
+    With Selection.Format.Line
+        .Visible = msoTrue
+        .ForeColor.RGB = RGB(0, 112, 192)
+        .Transparency = 0
+    End With
+    Selection.Format.Line.Visible = msoFalse
+    With Selection.Format.Fill
+        .Visible = msoTrue
+        .ForeColor.ObjectThemeColor = msoThemeColorBackground2
+        .ForeColor.TintAndShade = 0
+        .ForeColor.Brightness = -0.5
+        .Transparency = 0
+        .Solid
+    End With
+    With Selection.Format.Line
+        .Visible = msoTrue
+        .ForeColor.ObjectThemeColor = msoThemeColorBackground2
+        .ForeColor.TintAndShade = 0
+        .ForeColor.Brightness = -0.5
+        .Transparency = 0
+    End With
+    With Selection
+        .MarkerStyle = 8
+        .MarkerSize = 5
+    End With
+    Selection.MarkerStyle = -4115
+    Selection.MarkerSize = 10
+    ActiveChart.FullSeriesCollection(3).Select
+    Selection.Format.Line.Visible = msoFalse
+    With Selection
+        .MarkerStyle = 8
+        .MarkerSize = 5
+    End With
+    With Selection
+        .MarkerStyle = -4115
+        .MarkerSize = 10
+    ActiveChart.PivotLayout.PivotTable.PivotFields("[Measures].[Sum of SAAR]"). _
+        Caption = "SAAR"
+    ActiveChart.PivotLayout.PivotTable.PivotFields("[Measures].[Sum of SAARTarget]" _
+        ).Caption = "SAAR Target"
+    ActiveChart.PivotLayout.PivotTable.PivotFields("[Measures].[Sum of LowCI]"). _
+        Caption = "Low CI"
+    ActiveChart.PivotLayout.PivotTable.PivotFields("[Measures].[Sum of High CI]") _
+        .Caption = "High CI"
+    End With
+  
+  Next cht
+
+
+CurrentSheet.Activate
+Application.EnableEvents = True
+
+
+End Sub
+
