@@ -1,0 +1,142 @@
+Option Explicit
+
+Sub CreateUnitDash()
+'
+' Select a unit, refresh, save as PDF
+' Units included:  7_CP, 8CP, 9CP_PC, 9J CCU, 10CP, 11JONES, 14CP, 15CP, 16CP, 17_CP, 18J
+
+
+'
+    Range("W3").Select
+    ActiveCell.FormulaR1C1 = "7_CP"
+    ActiveWorkbook.RefreshAll
+    Worksheets("CLABSI_PIVOT").PivotTables("UNITCLAB24").PivotCache.Refresh
+    Worksheets("CAUTI_PIVOT").PivotTables("UNITCAU24").PivotCache.Refresh
+    Worksheets("CDI_PIVOT").PivotTables("UNITCDI24").PivotCache.Refresh
+    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+        "G:\IPAC\General\Department Operations\Data and Analysis\HAI Monthly Dashboards\Holding File for Dashboards\7CP.pdf" _
+        , Quality:=xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas _
+        :=False, OpenAfterPublish:=True
+        
+    Range("W3").Select
+    ActiveCell.FormulaR1C1 = "8CP"
+    ActiveWorkbook.RefreshAll
+    Worksheets("CLABSI_PIVOT").PivotTables("UNITCLAB24").PivotCache.Refresh
+    Worksheets("CAUTI_PIVOT").PivotTables("UNITCAU24").PivotCache.Refresh
+    Worksheets("CDI_PIVOT").PivotTables("UNITCDI24").PivotCache.Refresh
+    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+        "G:\IPAC\General\Department Operations\Data and Analysis\HAI Monthly Dashboards\Holding File for Dashboards\8CP.pdf" _
+        , Quality:=xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas _
+        :=False, OpenAfterPublish:=True
+        
+    Range("W3").Select
+    ActiveCell.FormulaR1C1 = "9CP_PC"
+    ActiveWorkbook.RefreshAll
+    Worksheets("CLABSI_PIVOT").PivotTables("UNITCLAB24").PivotCache.Refresh
+    Worksheets("CAUTI_PIVOT").PivotTables("UNITCAU24").PivotCache.Refresh
+    Worksheets("CDI_PIVOT").PivotTables("UNITCDI24").PivotCache.Refresh
+    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+        "G:\IPAC\General\Department Operations\Data and Analysis\HAI Monthly Dashboards\Holding File for Dashboards\9CP.pdf" _
+        , Quality:=xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas _
+        :=False, OpenAfterPublish:=True
+        
+    Range("W3").Select
+    ActiveCell.FormulaR1C1 = "9J CCU"
+    ActiveWorkbook.RefreshAll
+    Worksheets("CLABSI_PIVOT").PivotTables("UNITCLAB24").PivotCache.Refresh
+    Worksheets("CAUTI_PIVOT").PivotTables("UNITCAU24").PivotCache.Refresh
+    Worksheets("CDI_PIVOT").PivotTables("UNITCDI24").PivotCache.Refresh
+    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+        "G:\IPAC\General\Department Operations\Data and Analysis\HAI Monthly Dashboards\Holding File for Dashboards\9J CCU.pdf" _
+        , Quality:=xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas _
+        :=False, OpenAfterPublish:=True
+
+    Range("W3").Select
+    ActiveCell.FormulaR1C1 = "10CP"
+    ActiveWorkbook.RefreshAll
+    Worksheets("CLABSI_PIVOT").PivotTables("UNITCLAB24").PivotCache.Refresh
+    Worksheets("CAUTI_PIVOT").PivotTables("UNITCAU24").PivotCache.Refresh
+    Worksheets("CDI_PIVOT").PivotTables("UNITCDI24").PivotCache.Refresh
+    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+        "G:\IPAC\General\Department Operations\Data and Analysis\HAI Monthly Dashboards\Holding File for Dashboards\10CP.pdf" _
+        , Quality:=xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas _
+        :=False, OpenAfterPublish:=True
+        
+    Range("W3").Select
+    ActiveCell.FormulaR1C1 = "11JONES"
+    ActiveWorkbook.RefreshAll
+    Worksheets("CLABSI_PIVOT").PivotTables("UNITCLAB24").PivotCache.Refresh
+    Worksheets("CAUTI_PIVOT").PivotTables("UNITCAU24").PivotCache.Refresh
+    Worksheets("CDI_PIVOT").PivotTables("UNITCDI24").PivotCache.Refresh
+    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+        "G:\IPAC\General\Department Operations\Data and Analysis\HAI Monthly Dashboards\Holding File for Dashboards\11J.pdf" _
+        , Quality:=xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas _
+        :=False, OpenAfterPublish:=True
+        
+        
+    Range("W3").Select
+    ActiveCell.FormulaR1C1 = "14CP"
+    ActiveWorkbook.RefreshAll
+    Worksheets("CLABSI_PIVOT").PivotTables("UNITCLAB24").PivotCache.Refresh
+    Worksheets("CAUTI_PIVOT").PivotTables("UNITCAU24").PivotCache.Refresh
+    Worksheets("CDI_PIVOT").PivotTables("UNITCDI24").PivotCache.Refresh
+    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+        "G:\IPAC\General\Department Operations\Data and Analysis\HAI Monthly Dashboards\Holding File for Dashboards\14CP.pdf" _
+        , Quality:=xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas _
+        :=False, OpenAfterPublish:=True
+
+    Range("W3").Select
+    ActiveCell.FormulaR1C1 = "15CP"
+    ActiveWorkbook.RefreshAll
+    Worksheets("CLABSI_PIVOT").PivotTables("UNITCLAB24").PivotCache.Refresh
+    Worksheets("CAUTI_PIVOT").PivotTables("UNITCAU24").PivotCache.Refresh
+    Worksheets("CDI_PIVOT").PivotTables("UNITCDI24").PivotCache.Refresh
+    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+        "G:\IPAC\General\Department Operations\Data and Analysis\HAI Monthly Dashboards\Holding File for Dashboards\15CP.pdf" _
+        , Quality:=xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas _
+        :=False, OpenAfterPublish:=True
+        
+    Range("W3").Select
+    ActiveCell.FormulaR1C1 = "16CP"
+    ActiveWorkbook.RefreshAll
+    Worksheets("CLABSI_PIVOT").PivotTables("UNITCLAB24").PivotCache.Refresh
+    Worksheets("CAUTI_PIVOT").PivotTables("UNITCAU24").PivotCache.Refresh
+    Worksheets("CDI_PIVOT").PivotTables("UNITCDI24").PivotCache.Refresh
+    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+        "G:\IPAC\General\Department Operations\Data and Analysis\HAI Monthly Dashboards\Holding File for Dashboards\16CP.pdf" _
+        , Quality:=xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas _
+        :=False, OpenAfterPublish:=True
+        
+    Range("W3").Select
+    ActiveCell.FormulaR1C1 = "17_CP"
+    ActiveWorkbook.RefreshAll
+    Worksheets("CLABSI_PIVOT").PivotTables("UNITCLAB24").PivotCache.Refresh
+    Worksheets("CAUTI_PIVOT").PivotTables("UNITCAU24").PivotCache.Refresh
+    Worksheets("CDI_PIVOT").PivotTables("UNITCDI24").PivotCache.Refresh
+    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+        "G:\IPAC\General\Department Operations\Data and Analysis\HAI Monthly Dashboards\Holding File for Dashboards\17CP.pdf" _
+        , Quality:=xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas _
+        :=False, OpenAfterPublish:=True
+        
+    Range("W3").Select
+    ActiveCell.FormulaR1C1 = "18J"
+    ActiveWorkbook.RefreshAll
+    Worksheets("CLABSI_PIVOT").PivotTables("UNITCLAB24").PivotCache.Refresh
+    Worksheets("CAUTI_PIVOT").PivotTables("UNITCAU24").PivotCache.Refresh
+    Worksheets("CDI_PIVOT").PivotTables("UNITCDI24").PivotCache.Refresh
+    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+        "G:\IPAC\General\Department Operations\Data and Analysis\HAI Monthly Dashboards\Holding File for Dashboards\18J.pdf" _
+        , Quality:=xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas _
+        :=False, OpenAfterPublish:=True
+End Sub
+
+
+Sub facdash()
+ActiveWorkbook.RefreshAll
+ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+    "G:\IPAC\General\Department Operations\Data and Analysis\HAI Monthly Dashboards\Holding File for Dashboards\Hospital-Wide.pdf" _
+    , Quality:=xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas _
+    :=False, OpenAfterPublish:=True
+End Sub
+
+
